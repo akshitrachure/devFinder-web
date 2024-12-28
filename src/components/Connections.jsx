@@ -34,7 +34,7 @@ const Connections = () => {
 
   if(connections.length === 0){
     // console.log("lenght = 0");    
-    return <h1 className='text-xl'>No Connections found!!</h1>
+    return <h1 className='text-xl flex justify-center my-10'>No Connections found!!</h1>
   }
 
 
@@ -45,7 +45,7 @@ const Connections = () => {
             const {firstName, lastName, age, gender, photoUrl, about} = connection
 
             return (
-                <div key={connection._id} className='flex m-4 p-4 bg-base-300 rounded-lg w-1/2 mx-auto'>
+                <div key={connection._id} className='flex gap-4 items-center m-4 p-4 bg-base-300 rounded-lg w-1/2 mx-auto'>
                     <div className=''>
                         <img className='w-16 h-16 rounded-full' alt={firstName} src={photoUrl}/>  
                     </div>
