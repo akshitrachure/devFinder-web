@@ -51,7 +51,9 @@ const NavBar = () => {
               <span className="badge"></span>
             </Link>
           </li>
-          <li><Link to='/feed' className='cursoe-pointer'>Feed</Link></li>
+          <li><Link to='/feed' className='cursor-pointer'>Feed</Link></li>
+          <li><Link to='/connections' className='cursor-pointer'>My Connections</Link></li>
+          <li><Link to='/requests' className='cursor-pointer'>My Requests</Link></li>
           <li><a className='cursor-pointer' onClick={handleLogout}>Logout</a></li>
         </ul>
       </div>
