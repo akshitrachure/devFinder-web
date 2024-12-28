@@ -29,9 +29,17 @@ const Feed = () => {
   },[])
 
 
+  if(!feed) return;
+
+  if(feed.length === 0){
+    return <h1 className='flex justify-center my-10'>No users in the feed!</h1>
+  }
+
+
   return (
     <div className='flex flex-col justify-center'>
-      {feed && feed.map(user => <UserCard key={user._id} user={user}/>)}
+      {/* {feed && feed.map(user => <UserCard key={user._id} user={user}/>)} */}
+      {feed && <UserCard user={feed[0]}/>}
     </div>
   )
 }
