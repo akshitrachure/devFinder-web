@@ -4,6 +4,7 @@ import { Link, useNavigate } from 'react-router-dom'
 import axios from 'axios'
 import { BASE_URL } from '../utils/constants'
 import { removeUser } from '../utils/userSlice'
+import { removeFeed } from '../utils/feedSlice'
 
 const NavBar = () => {
   const dispatch = useDispatch();
@@ -16,6 +17,7 @@ const NavBar = () => {
         withCredentials: true
       })
       dispatch(removeUser())
+      dispatch(removeFeed())
       return navigate('/login')
     }
     catch(err){
@@ -46,10 +48,10 @@ const NavBar = () => {
           <li>
             <Link to='/profile' className="justify-between">
               Profile
-              <span className="badge">New</span>
+              <span className="badge"></span>
             </Link>
           </li>
-          <li><a>Settings</a></li>
+          <li><Link to='/feed' className='cursoe-pointer'>Feed</Link></li>
           <li><a className='cursor-pointer' onClick={handleLogout}>Logout</a></li>
         </ul>
       </div>
