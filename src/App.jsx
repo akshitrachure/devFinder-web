@@ -8,6 +8,8 @@ import {Provider} from 'react-redux'
 import Feed from './components/Feed'
 import Connections from './components/Connections'
 import Requests from './components/Requests'
+//FOR RAZORPAY INTEGRATION
+// import Premium from './components/Premium'
 
 
 
@@ -24,6 +26,8 @@ function App() {
             <Route path='/feed' element={<Feed/>}></Route>
             <Route path='/connections' element={<Connections/>}></Route>
             <Route path='/requests' element={<Requests/>}></Route>
+            {/* FOR RAZORPAY INTEGRATION */}
+            {/* <Route path='/premium' element={<Premium/>}></Route> */}
           </Route>          
         </Routes>
       </BrowserRouter>

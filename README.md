@@ -73,6 +73,7 @@ Body
         - restart nginx - sudo systemctl restart nginx
         - Modify the BASEURL in frontend project to "/api"
 
+
     From the 2nd time onwards perform deployment as follows:
     - Frontend:
         - cd devFinderWeb
@@ -172,7 +173,7 @@ Body
     - create Schema and model
     - saved the order in payments collection
     - make the API dynamic
-    - Setup RRazorpay webhook on your live APi
+    - Setup Razorpay webhook on your live APi
     - Ref - https://github.com/razorpay/razorpay-node/tree/master/documents
     - Ref - https://razorpay.com/docs/payments/server-integration/nodejs/integration-steps/#integrate-with-razorpay-payment-gateway
     - Ref - https://razorpay.com/docs/webhooks/validate-test/

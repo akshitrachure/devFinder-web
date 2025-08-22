@@ -54,6 +54,8 @@ const NavBar = () => {
           <li><Link to='/feed' className='cursor-pointer'>Feed</Link></li>
           <li><Link to='/connections' className='cursor-pointer'>My Connections</Link></li>
           <li><Link to='/requests' className='cursor-pointer'>Received Requests</Link></li>
+          {/* FOR RAZORPAY INTEGRATION
+          <li><Link to='/premium' className='cursor-pointer'>Go Premium</Link></li> */}
           <li><a className='cursor-pointer' onClick={handleLogout}>Logout</a></li>
         </ul>
       </div>
