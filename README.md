@@ -73,7 +73,8 @@ Body
         - restart nginx - sudo systemctl restart nginx
         - Modify the BASEURL in frontend project to "/api"
 
-    From the 2nd time onwards:
+
+    From the 2nd time onwards perform deployment as follows:
     - Frontend:
         - cd devFinderWeb
         - ensure you are on the main branch else do git checkout main
