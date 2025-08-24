@@ -76,7 +76,7 @@ const Chat = () => {
                             <time className="text-xs opacity-50 p-1">{msg.timestamp}</time>
                         </div>
                         <div className="chat-bubble">{msg.text}</div>
-                        <div className="chat-footer opacity-50">Seen</div>
+                        {/* <div className="chat-footer opacity-50">Seen</div> */}
                     </div>
                 )
             })}
