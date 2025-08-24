@@ -3,6 +3,7 @@ import React, { useEffect, useState } from 'react'
 import { BASE_URL } from '../utils/constants';
 import {useDispatch, useSelector} from 'react-redux'
 import {addConnections} from '../utils/connectionSlice'
+import { Link } from 'react-router-dom';
 
 const Connections = () => {
   const dispatch = useDispatch()
@@ -20,6 +21,10 @@ const Connections = () => {
     catch(err){
         console.log(err.message);        
     }
+  }
+
+  const handleChat = () => {
+    
   }
 
   useEffect(()=>{
@@ -45,14 +50,26 @@ const Connections = () => {
             const {firstName, lastName, age, gender, photoUrl, about} = connection
 
             return (
-                <div key={connection._id} className='flex gap-4 items-center m-4 p-4 bg-base-300 rounded-lg w-1/2 mx-auto'>
-                    <div className=''>
-                        <img className='w-16 h-16 rounded-full' alt={firstName} src={photoUrl}/>  
+                <div key={connection._id} className='flex gap-4 justify-between items-center m-4 p-4 bg-base-300 rounded-lg w-1/2 mx-auto'>
+                    <div className='flex gap-4 items-center'>
+                      <div className=''>
+                          <img className='w-16 h-16 rounded-full' alt={firstName} src={photoUrl}/>  
+                      </div>
+                      <div className='text-left mx-8'>
+                          <h1 className='text-md font-bold'>{firstName + " " + lastName}</h1>
+                          <p className='text-sm'>{age + " " + gender}</p>
+                          <p className='text-sm'>{about}</p>
+                      </div>
                     </div>
-                    <div className='text-left mx-8'>
-                        <h1 className='text-md font-bold'>{firstName + " " + lastName}</h1>
-                        <p className='text-sm'>{age + " " + gender}</p>
-                        <p className='text-sm'>{about}</p>
+                    <div>
+                      <Link to={'/chat/'+ connection._id}>
+                        <button 
+                          onClick={handleChat}
+                          className='btn btn-primary '
+                        >
+                          Chat
+                        </button>            
+                      </Link>
                     </div>
                 </div>
             )

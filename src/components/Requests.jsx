@@ -57,13 +57,15 @@ const Requests = () => {
 
             return (
                 <div key={_id} className='flex justify-between items-center m-4 p-4 bg-base-300 rounded-lg w-2/3 mx-auto'>
-                    <div className=''>
-                        <img className='w-16 h-16 rounded-full' alt={firstName} src={photoUrl}/>  
-                    </div>
-                    <div className='text-left mx-8'>
-                        <h1 className='text-md font-bold'>{firstName + " " + lastName}</h1>
-                        <p className='text-sm'>{age + " " + gender}</p>
-                        <p className='text-sm'>{about}</p>
+                    <div className='flex justify-between items-center'>
+                      <div className=''>
+                          <img className='w-16 h-16 rounded-full' alt={firstName} src={photoUrl}/>  
+                      </div>
+                      <div className='text-left mx-8'>
+                          <h1 className='text-md font-bold'>{firstName + " " + lastName}</h1>
+                          <p className='text-sm'>{age + " " + gender}</p>
+                          <p className='text-sm'>{about}</p>
+                      </div>                    
                     </div>
                     <div className='flex gap-4 '>
                       <button 
